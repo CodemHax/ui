@@ -18,27 +18,31 @@ class MyCircleAvatar extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return SizedBox(
-      width: 120, // Width for better fit
-      height: 150, // Match height to parent container
+      width: 100,
+      height: 120,
       child: Padding(
-        padding: EdgeInsets.symmetric(horizontal: 8, vertical: 8),
+        padding: EdgeInsets.symmetric(horizontal: 4, vertical: 4),
         child: Column(
           mainAxisAlignment: MainAxisAlignment.center,
+          mainAxisSize: MainAxisSize.min,
           children: [
             CircleAvatar(
-              radius: 40,
+              radius: 35,
               backgroundColor: backgroundColor ?? Colors.blue[100],
               child: isFontAwesomeIcon(icon)
-                ? FaIcon(icon, size: 30, color: Colors.blue[800])
-                : Icon(icon, size: 32),
+                ? FaIcon(icon, size: 24, color: Colors.blue[800])
+                : Icon(icon, size: 24),
             ),
-            const SizedBox(height: 8),
+            const SizedBox(height: 6),
             Text(
               name,
-              style: Theme.of(context).textTheme.bodyMedium,
+              style: TextStyle(
+                fontSize: 13,
+                fontWeight: FontWeight.w500,
+              ),
               overflow: TextOverflow.ellipsis,
               textAlign: TextAlign.center,
-              maxLines: 2,
+              maxLines: 1,
             ),
           ],
         ),
@@ -46,7 +50,6 @@ class MyCircleAvatar extends StatelessWidget {
     );
   }
 
-  // Helper method to check if icon is a FontAwesome icon
   bool isFontAwesomeIcon(IconData icon) {
     return icon.fontFamily?.startsWith('FontAwesome') ?? false;
   }

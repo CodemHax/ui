@@ -66,8 +66,6 @@ class HospitalCard extends StatelessWidget {
                   maxLines: 1,
                   overflow: TextOverflow.ellipsis,
                 ),
-
-                // Address
                 Padding(
                   padding: const EdgeInsets.only(top: 6.0),
                   child: Row(
@@ -88,14 +86,11 @@ class HospitalCard extends StatelessWidget {
                     ],
                   ),
                 ),
-
-                // Rating and distance row
                 Padding(
                   padding: const EdgeInsets.only(top: 8.0),
                   child: Row(
                     mainAxisAlignment: MainAxisAlignment.spaceBetween,
                     children: [
-                      // Rating
                       Row(
                         children: [
                           for (int i = 0; i < 5; i++)
@@ -118,8 +113,6 @@ class HospitalCard extends StatelessWidget {
                           ),
                         ],
                       ),
-
-                      // Distance
                       Row(
                         children: [
                           Icon(Icons.directions_walk, size: 16, color: Colors.blue),

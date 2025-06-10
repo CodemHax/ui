@@ -84,7 +84,7 @@ class AppointmentCard extends StatelessWidget {
             ),
           ),
           Container(
-            width: 347,
+            width: width > 347 ? 347 : width - 32,
             height: 55,
             decoration: BoxDecoration(
               shape: BoxShape.rectangle,

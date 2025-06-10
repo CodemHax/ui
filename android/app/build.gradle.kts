@@ -7,8 +7,8 @@ plugins {
 
 android {
     namespace = "site.haxarc.ui"
-    compileSdk = 33 // Updated to target Android 13
-    ndkVersion = flutter.ndkVersion
+    compileSdk = 34 // Updated to target Android 14
+    ndkVersion = "27.0.12077973" // Updated to match fluttertoast requirement
 
     compileOptions {
         sourceCompatibility = JavaVersion.VERSION_11
@@ -25,7 +25,7 @@ android {
         // You can update the following values to match your application needs.
         // For more information, see: https://flutter.dev/to/review-gradle-config.
         minSdk = 21 // Setting minimum SDK to ensure good compatibility
-        targetSdk = 33 // Target Android 13
+        targetSdk = 34 // Updated to Android 14
         versionCode = flutter.versionCode
         versionName = flutter.versionName
     }
