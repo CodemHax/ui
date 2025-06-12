@@ -7,12 +7,12 @@ class ServiceCard extends StatelessWidget {
   final String title;
 
   const ServiceCard({
-    Key? key,
+    super.key,
     required this.color,
     required this.iconColor,
     required this.icon,
     required this.title,
-  }) : super(key: key);
+  });
 
   @override
   Widget build(BuildContext context) {
